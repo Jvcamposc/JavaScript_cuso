@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sistema para Estrangeiro</h1>
+    Digite o seu país: <input type="text" name="textp" id="textp">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular(){
+            var txtv = window.document.querySelector('input#textp')
+            var res = window.document.querySelector('div#res')
+            var vel = Text(txtv.value)
+
+            res.innerHTML = `<p> O seu país e <strong> ${txtv} </strong></p>`
+
+            if(txtv === 'brasil'){
+                res.innerHTML += `<p> Voce e Brasileiro </p>`
+            }else{
+                res.innerHTML += `<p> Voce e <strong>Estrangeiro</strong> </p>`
+            }
+        }
+    </script>
+</body>
+</html>
